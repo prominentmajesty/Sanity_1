@@ -1,20 +1,31 @@
 import React from 'react';
-
+import {
+  About,
+  Footer,
+  Header,
+  Skills,
+  Testimonial,
+  Work
+} from './container';
+import {Navbar} from './components';
+import './app.scss';
 /* 
 Github URL for the css and scss of this course.
-https://gist.github.com/adrianhajdin/52b513f1d8a8189747595a587c3132e4
-OR
+cOR
 Url of this Portfolio project
 https://github.com/adrianhajdin/project_professional_portfolio 
 Ugoch
 */
-
-
-
 function App() {
   return (
-    <div>
-      <></>
+    <div className='app'>
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonial />
+      <Footer />
     </div>
   )
 }
