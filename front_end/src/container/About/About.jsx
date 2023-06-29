@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
 import './About.scss';
@@ -23,7 +23,7 @@ function About() {
   return (
     <>
       <h2 className='head-text'>
-        I Know That <span>Good App</span> <br /> means <span>Good Business</span>
+        In need of quality management and services, <br /> <span>we are</span> <span>experts on the following..</span>
       </h2>
 
       <div className='app__profiles'>
@@ -46,4 +46,8 @@ function About() {
   )
 }
 
-export default AppWrap(About, 'about')
+export default AppWrap(
+  MotionWrap(About, 'app__about'), 
+  'about',
+  "app__whitebg"
+)

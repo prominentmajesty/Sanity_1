@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {AiFillEye, AiFillGithub} from 'react-icons/ai';
 import {motion} from 'framer-motion';
 
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
 
@@ -19,6 +19,7 @@ function Work() {
 
     client.fetch(query)
     .then((data) => {
+      console.log(data);
       setWorks(data);
       setFillterWork(data)
     })
@@ -34,20 +35,19 @@ function Work() {
       if(item === 'All'){
         setFillterWork(works);
       }else{
-        setFillterWork(works.filter((work) => work.tags.includes(item)))
+        setFillterWork(works.filter((work) => work.tags.includes(item))) 
       }
     }, 500);
-  }
-
+  } 
   {console.log(filterwork, '')}
 
   return (
     <>
       <h2 className='head-text'>
-        My Creative <span>Portfolio</span> Section..
+        Dorado knows that <span>Excelent services</span> <br /> mean <span>good Business</span>
       </h2>
       <div className='app__work-filter'>
-        {['DevOps', 'UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['Real Estate', 'Property Management', 'Building', 'Bricklaying', 'Architectural Design', 'All'].map((item, index) => (
           <div 
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -103,7 +103,6 @@ function Work() {
                   <p className='p-text'>{work.tags[0]}</p>
                 </div>
               </div>
-
           </div>
         ))}
       </motion.div>
@@ -111,4 +110,8 @@ function Work() {
   )
 }
 
-export default AppWrap(Work, 'work')
+export default AppWrap(
+  MotionWrap(Work, 'app__works'), 
+  'work',
+  "app__primarybg"
+)

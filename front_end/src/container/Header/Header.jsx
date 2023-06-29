@@ -28,13 +28,13 @@ function Header() {
           <div className='badge-cmp app__flex'>
             <span>👋</span>
             <div style={{marginLeft : 20}}>
-              <p className='p-text'>Helo, I am </p>
-              <h1 className='head-text'>Micheal</h1>
+              <p className='p-text'>Helo!! We are</p>
+              <h2 className='head-text'>DORADO<h6 style={{lineHeight : '0.6'}}>NIG..</h6></h2>
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className='p-text'>Web Developer</p>
-            <p className='p-text'>Freelancer</p>
+            <p className='p-text'>Expert in Property Management,</p>
+            <p className='p-text'>Real Estate, Architectural designs & building</p>
           </div>
         </div>
       </motion.div> 
@@ -44,7 +44,7 @@ function Header() {
         transition={{duration : 0.5, delayChildren : 0.5}}
         className='app__header-img'
       >
-        <img src={images.profile} alt='profile_bg' />
+        <img src={images.property6} alt='profile_bg'style={{borderRadius : '10rem'}} />
         <motion.img
           whileInView={{scale : [0, 1]}}
           transition={{duration : 1, ease : easeInOut}}
@@ -59,7 +59,7 @@ function Header() {
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >
-       {[images.flutter, images.redux, images.sass].map((circle, index)=> (
+       {[images.property1, images.property19, images.property20].map((circle, index)=> (
         <div className='circle-cmp app__flex' key={`circle-${index}`}>
           <img src={circle} alt='circle'/>
         </div>

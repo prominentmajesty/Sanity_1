@@ -15,7 +15,7 @@ export default{
         },
         {
             name:'icon',
-            title:'Icon',
+            title:'icon',
             type: 'image',
             options: {
               hotspot: true,

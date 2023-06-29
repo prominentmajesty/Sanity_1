@@ -1,5 +1,5 @@
 export default {
-    name : 'testimonial',
+    name : 'testimonials',
     title : 'Testimonial',
     type : 'document',
 
@@ -17,8 +17,8 @@ export default {
         },
 
         {
-            name : 'imageurl',
-            title : 'Image',
+            name : 'imgurl',
+            title : 'image',
             type : 'image',
             options : {
                 hotspot : true,

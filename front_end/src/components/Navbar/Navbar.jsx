@@ -12,10 +12,11 @@ function Navbar() {
   return (
     <nav className="app__navbar">
       <div className='app__navbar-logo'>
-        <img src={images.logo} alt="logo" />    
+        {/* <img src={images.miceal} alt="logo" />     */}
+        <h2 className='dora'>Dorado</h2>
       </div>
       <ul className='app__navbar-links'>
-        {['Home', 'About', 'Contact', 'Work', 'Skills', 'Contact'].map((item)=> (
+        {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item)=> (
           <li className='app__flex p-text' key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -24,7 +25,6 @@ function Navbar() {
       </ul>
       <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)}/>
-
         {toggle && (
           <motion.div
             whileInView={{x : [300, 0]}}
@@ -32,7 +32,7 @@ function Navbar() {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['Home', 'About', 'Contact', 'Work', 'Skills', 'Contact'].map((item)=> (
+              {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item)=> (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a> 
                 </li>
