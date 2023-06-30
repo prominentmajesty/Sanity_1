@@ -34,8 +34,7 @@ function Footer() {
       name : name,
       email : email,
       message : message
-    }
-    console.log(client.config());
+    } 
 
     client.create(contact).then(() => {
       setLoading(false);
@@ -46,16 +45,16 @@ function Footer() {
 
   return (
     <>
-      <h2 className='head-text'>Take a coffee & chat with me</h2>
+      <h2 className='head-text'>Dorado is allways ready <br/>to do bussiness with you!! Contact Us</h2>
 
       <div className='app__footer-cards'>
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
-          <a href='mailto:ugochukwuaugustine7@gmail.com' className='p-text'>ugochukwuaugustine7@gmail.com</a>
+          <a href='mailto:ugochukwuaugustine7@gmail.com' className='p-text'>kingdozy@yahoo.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="mobile" />
-          <a href='tel: +1 (234) 136-719-587' className='p-text'>+1 (234) 136-719-587</a>
+          <a href='tel: +1 (234) 136-719-587' className='p-text'>+1 (234) 08035420791</a>
         </div>
       </div>
       {

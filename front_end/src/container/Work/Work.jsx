@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {AiFillEye, AiFillGithub} from 'react-icons/ai';
+import {AiFillEye, AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillPhone} from 'react-icons/ai';
 import {motion} from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -44,7 +44,7 @@ function Work() {
   return (
     <>
       <h2 className='head-text'>
-        Dorado knows that <span>Excelent services</span> <br /> mean <span>good Business</span>
+        Dorado knows that <span>Excelent services</span> <br /> mean <span>good Business</span><br/>Take a look..
       </h2>
       <div className='app__work-filter'>
         {['Real Estate', 'Property Management', 'Building', 'Bricklaying', 'Architectural Design', 'All'].map((item, index) => (
@@ -79,7 +79,7 @@ function Work() {
                     transition={{duration : 0.25}}
                     className='app__flex'
                   >
-                    <AiFillEye />
+                    <AiFillPhone />
                   </motion.div>
                 </a>
                 <a href={work.codeLink} target='_blank' rel='noreferrer'>
@@ -89,9 +89,11 @@ function Work() {
                     transition={{duration : 0.25}}
                     className='app__flex'
                   >
-                    <AiFillGithub />
+                    {/* <AiFillFacebook /> */}
+                    <p style={{lineHeight : '0px'}}>08035420791</p>
                   </motion.div>
                 </a>
+                {/* <p style={{lineHeight : '0px'}}></p> */}
               </motion.div>
             </div>
 
